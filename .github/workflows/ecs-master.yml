@@ -63,4 +63,6 @@ jobs:
       - name: docker
         id: docker
         run: docker build -t test .
+        with:
+          context: .
 
