@@ -58,7 +58,7 @@ jobs:
 
       - name: ee
         id: ee
-        run: ls -la
+        run: cd ./build && ls -la
 
       - name: docker
         id: docker
