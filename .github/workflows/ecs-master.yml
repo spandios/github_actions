@@ -50,6 +50,13 @@ jobs:
           java-version: "11"
           distribution: "adopt"
           cache: "gradle"
+
+      - name: Build Spring
+        id: build-spring
+        run: ./gradlew build
+
+      - name: docker
+        id: docker
         run: |
-          ./gradlew build
+          ls -l build/libs
           docker build -t test .
